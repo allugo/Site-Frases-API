@@ -1,0 +1,79 @@
+body > #root > div {
+    height: 100vh;
+  }
+
+@font-face{
+    font-family: 'Merienda';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./../font/Merienda-Regular.ttf'); /* IE9 Compat Modes */
+}
+  
+.mainContainer{
+    justify-content: center;
+    background-color: #181819;
+}
+
+.phraseContainer{
+    color: #d6d100;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Merienda';
+    margin-top: 200px;
+}
+
+.authorName{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    height: 50px;
+    background-color: #000000;
+}
+
+a{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+
+/* unvisited link */
+a:link {
+    color: #d6d100;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #d6d100;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #fffc5d;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #d6d100;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }

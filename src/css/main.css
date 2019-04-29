@@ -8,6 +8,13 @@ body > #root > div {
     font-weight: 400;
     src: url('./../font/Merienda-Regular.ttf'); /* IE9 Compat Modes */
 }
+
+@font-face{
+  font-family: 'WorkSans';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./../font/WorkSans-ExtraLight.ttf');
+}
   
 .mainContainer{
     justify-content: center;
@@ -25,12 +32,20 @@ body > #root > div {
 }
 
 .authorName{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'WorkSans';
+}
+
+.logo{
+  width: 130px;
+  height: 30px;
 }
 
 .header{
     height: 50px;
-    background-color: #000000;
+    background-color: #d6d100;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 a{
@@ -40,6 +55,15 @@ a{
     -webkit-transition:.5s;
     /* ...and now for the proper property */
     transition:.5s;
+}
+
+.aleatorio{
+  color: #d6d100;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 30px;
+  font-family: 'WorkSans';
 }
 
 /* unvisited link */

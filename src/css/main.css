@@ -113,47 +113,47 @@ body > #root > div {
   }
 }
 
-@media screen and (max-width: 300px) {
-  .phraseContainer{
-    color: #d6d100;
+@media screen and (max-width: 326px) {
+    .phraseContainer{
+      color: #d6d100;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 18px;
+      font-family: 'Merienda';
+      margin-top: 80px;
+      flex: 2;
+  }
+
+  .aleatorio{
+    color: #181819;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 18px;
-    font-family: 'Merienda';
-    margin-top: 80px;
-    flex: 2;
-}
+    font-family: 'WorkSans';
+    background-color: #d6d100;
+    flex: 1;
+    font-size: 16px;
+  }
 
-.aleatorio{
-  color: #181819;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: 'WorkSans';
-  background-color: #d6d100;
-  flex: 1;
-  font-size: 16px;
-}
+  .blackText {
+    font-size: 14px;
+    font-weight: bolder;
+  }
 
-.blackText {
-  font-size: 14px;
-  font-weight: bolder;
-}
+  .dica{
+    font-size: 0px;
+  }
 
-.dica{
-  font-size: 0px;
-}
+  .authorName{
+    font-family: 'WorkSans';
+    font-size: 16px;
+    margin-top: -10px;
+  }
 
-.authorName{
-  font-family: 'WorkSans';
-  font-size: 16px;
-  margin-top: -10px;
-}
-
-a {
-  font-size: 16px;
-}
+  a {
+    font-size: 16px;
+  }
 }
 
 .logo{

@@ -113,7 +113,7 @@ body > #root > div {
   }
 }
 
-@media screen and (max-width: 326px) {
+@media screen and (max-width: 465px) {
     .phraseContainer{
       color: #d6d100;
       align-items: center;

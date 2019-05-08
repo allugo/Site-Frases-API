@@ -180,16 +180,6 @@ await fetch("https://allugofrases.herokuapp.com/procurarFrase ", {
                     </Tooltip>
                 </Col>
             </Row>
-            <Row className="aleatorio">
-              <Col xs='12'>
-                <b>DICA: </b>passe o mouse em cima dos textos pra entender como funciona a API :)
-                <br/>
-                <b><a onClick={() => this.random()} id="random" href="javascript:void(0)">(Essa frase foi buscada aleatóriamente na API! Atualize a página para ver outras! :D)</a></b>
-                <Tooltip placement="bottom" isOpen={this.state.tooltipRandom} target="random" toggle={this.toggleRandom}>
-                    Quer aprender à pegar uma frase aleatória na API? Clica aí!
-                </Tooltip>
-              </Col>
-            </Row>
             {this.state.loading ? <Loading/> : (
               <Row className="phraseContainer">
                 <Col xs='12'>
@@ -200,7 +190,9 @@ await fetch("https://allugofrases.herokuapp.com/procurarFrase ", {
                     </Tooltip>
                     <Col xs='12' style={{fontSize: 18, padding: 20}} className="authorName">
                         {/* Autor - Livro */}
+                        <div className="authorName">
                         - <a onClick={() => this.author(this.state.frase.autor)} id="author" href="javascript:void(0)">{this.state.frase.autor}</a> (<a onClick={() => this.book(this.state.frase.livro)} id="book" href="javascript:void(0)">{this.state.frase.livro}</a>)
+                        </div>
                         <Tooltip placement="bottom" isOpen={this.state.tooltipAuthor} target="author" toggle={this.toggleAuthor}>
                          Quer buscar na API pelo autor? Clica!
                         </Tooltip>
@@ -211,6 +203,17 @@ await fetch("https://allugofrases.herokuapp.com/procurarFrase ", {
                 </Col>
             </Row>
             )}
+            <Row className="aleatorio">
+              <Col xs='12'>
+                <div className="dica">
+                DICA: <b>clique em cima dos textos pra entender como funciona a API :)</b>
+                </div>
+                <b><a className="blackText" onClick={() => this.random()} id="random" href="javascript:void(0)">(Essa frase foi buscada aleatóriamente na API! Clica aqui pra aprender a fazer isso. Atualize a página para ver outras! :D)</a></b>
+                <Tooltip placement="bottom" isOpen={this.state.tooltipRandom} target="random" toggle={this.toggleRandom}>
+                    Quer aprender à pegar uma frase aleatória na API? Clica aí!
+                </Tooltip>
+              </Col>
+            </Row>
         </Container>
     );
   }

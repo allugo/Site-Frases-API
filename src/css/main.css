@@ -1,5 +1,7 @@
 body > #root > div {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
 @font-face{
@@ -28,11 +30,87 @@ body > #root > div {
     text-align: center;
     font-size: 30px;
     font-family: 'Merienda';
-    margin-top: 200px;
+    margin-top: 90px;
+    flex: 2.5;
 }
 
 .authorName{
+  font-family: 'WorkSans';
+  font-size: 20px;
+}
+
+.aleatorio{
+  color: #181819;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'WorkSans';
+  background-color: #d6d100;
+  flex: 1;
+  font-size: 20px;
+}
+
+.blackText:link {
+  color: #181819;
+}
+
+.blackText:hover {
+  color: #6d6d74;
+}
+
+.blackText {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.dica{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .phraseContainer{
+      color: #d6d100;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 18px;
+      font-family: 'Merienda';
+      margin-top: 80px;
+      flex: 3;
+  }
+
+  .aleatorio{
+    color: #181819;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     font-family: 'WorkSans';
+    background-color: #d6d100;
+    flex: 1;
+    font-size: 16px;
+  }
+
+  .blackText {
+    font-size: 16px;
+    font-weight: bolder;
+  }
+
+  .dica{
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+  .authorName{
+    font-family: 'WorkSans';
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+  a {
+    font-size: 16px;
+  }
 }
 
 .logo{
@@ -55,15 +133,6 @@ a{
     -webkit-transition:.5s;
     /* ...and now for the proper property */
     transition:.5s;
-}
-
-.aleatorio{
-  color: #d6d100;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 30px;
-  font-family: 'WorkSans';
 }
 
 /* unvisited link */

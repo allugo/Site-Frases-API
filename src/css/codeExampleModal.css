@@ -18,6 +18,15 @@
     src: url('./../font/Merienda-Regular.ttf'); /* IE9 Compat Modes */
 }
 
+@media screen and (max-width: 600px) {
+    .modalCode{
+        background-color: #181819;
+        color: #d6d100;
+        font-family: 'WorkSans-Light';
+        font-size: 14px;
+    }
+}
+
 .modalCode{
     background-color: #181819;
     color: #d6d100;

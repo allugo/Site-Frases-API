@@ -34,7 +34,7 @@ class Main extends Component {
   async getFrase(){
     this.toggleLoading();
     
-    await fetch("https://allugofrases.herokuapp.com/fraseAleatoria")
+    await fetch("https://allugofrases.herokuapp.com/frases/random")
     .then((res) => res.json())
     .then((resJson) => this.setState({frase: resJson}))
     .catch((err) => alert("Epa!, Algo deu errado: " + err));
@@ -86,13 +86,13 @@ class Main extends Component {
     this.setState({
       codeString: 
       `// Pelo ID da frase
-await fetch("https://allugofrases.herokuapp.com/fraseid?id=` + id + `")
+await fetch("https://allugofrases.herokuapp.com/frases/find/` + id + `")
 .then((res) => res.json())
 .then((resJson) => this.setState({frase: resJson}))
 .catch((err) => alert("Epa!, Algo deu errado: " + err));
 
 // Por uma string de busca.
-await fetch("https://allugofrases.herokuapp.com/procurarFrase ", {
+await fetch("https://allugofrases.herokuapp.com/frases/search ", {
   method: 'POST',
     headers: {'Content-Type':'application/json; charset=utf-8'},
     // Body da Requisição.
@@ -114,7 +114,7 @@ await fetch("https://allugofrases.herokuapp.com/procurarFrase ", {
   author(name){
     this.setState({
       codeString: 
-`await fetch("https://allugofrases.herokuapp.com/frasesPorAutor", {
+`await fetch("https://allugofrases.herokuapp.com/frases/author", {
   method: 'POST',
   headers: {'Content-Type':'application/json; charset=utf-8'},
   // Body da Requisição.
@@ -136,7 +136,7 @@ await fetch("https://allugofrases.herokuapp.com/procurarFrase ", {
   book(title){
     this.setState({
       codeString: 
-`await fetch("https://allugofrases.herokuapp.com/frasesPorLivro ", {
+`await fetch("https://allugofrases.herokuapp.com/frases/book ", {
   method: 'POST',
     headers: {'Content-Type':'application/json; charset=utf-8'},
     // Body da Requisição.
@@ -157,7 +157,7 @@ await fetch("https://allugofrases.herokuapp.com/procurarFrase ", {
   random(){
     this.setState({
       codeString: 
-`await fetch("https://allugofrases.herokuapp.com/fraseAleatoria")
+`await fetch("https://allugofrases.herokuapp.com/frases/random")
 .then((res) => res.json())
 .then((resJson) => this.setState({fraseAleatoria: resJson}))
 .catch((err) => alert("Epa!, Algo deu errado: " + err));
@@ -174,7 +174,7 @@ await fetch("https://allugofrases.herokuapp.com/procurarFrase ", {
           <CodeModal action={this.state.action} codeString={this.state.codeString} open={this.state.modalOpen} toggle={this.toggleModal}/>
             <Row className="header shadow">
                 <Col xs='12'>
-                    <a id="logo" target="_blank" href="http://instagram.com/allugo_app"><img className="logo" src={require("./../img/logo.png")} /></a>
+                    <a id="logo" target="_blank" href="http://instagram.com/allugolivros"><img className="logo" src={require("./../img/logo.png")} /></a>
                     <Tooltip placement="bottom" isOpen={this.state.tooltipLogo} target="logo" toggle={this.toggleLogo}>
                             Dá uma olhada no nosso trabalho!
                     </Tooltip>

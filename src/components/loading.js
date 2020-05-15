@@ -15,12 +15,8 @@ class Loading extends Component {
 
   render(){
     return (
-        <Container fluid className="mainContainer">
-            <Row className="phraseContainer">
-                <Col xs='12' style={{marginTop: 20}}>
-                    <Spinner style={{ width: '3rem', height: '3rem' }} color="warning" />
-                </Col>
-            </Row>
+        <Container fluid className="mainContainer" style={{ flex: 2.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Spinner style={{ width: '3rem', height: '3rem'}} color="warning" />
         </Container>
     );
   }

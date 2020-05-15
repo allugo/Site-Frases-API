@@ -25,12 +25,12 @@ body > #root > div {
 
 .phraseContainer{
     color: #d6d100;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-size: 30px;
     font-family: 'Merienda';
-    margin-top: 90px;
     flex: 2.5;
 }
 
